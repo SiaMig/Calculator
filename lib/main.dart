@@ -27,26 +27,26 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( title: const Text("Calculator"),),
-      body: Column(
-        children: <Widget>[
+      body:Column(
+     crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
           Container(
             alignment: Alignment.centerRight,
-            //  used to provide space around a specific widget element [Padding]
-          padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
-            child: const Text("0", 
-            style: TextStyle(fontSize: 38),),
+            padding:const EdgeInsets.fromLTRB(10, 20, 10, 0),
+            child: const Text("0", style: TextStyle(fontSize: 40),),
           ),
-          Container(
-            alignment: Alignment.centerRight,
-            //  used to provide space around a specific widget element [Padding]
-          padding: EdgeInsets.fromLTRB(10, 30, 10, 0),
-            child: const Text("0", 
-            style: TextStyle(fontSize: 48),),
-          ),
+          Expanded(child: 
+          Container(alignment: Alignment.centerRight,
+            padding:const EdgeInsets.fromLTRB(10, 20, 10, 0),
+            child: const Text("/", style: TextStyle(fontSize: 20),),
+
+          ))
         ],
-      ),
-    );
-  }
+   
+
+        ),
+   
+  );}
 }
 void main(){
   runApp(const MyApp());
